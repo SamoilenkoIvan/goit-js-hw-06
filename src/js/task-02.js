@@ -7,13 +7,11 @@ const ingredients = [
   "Condiments",
 ];
 const listIngredients = document.querySelector("#ingredients");
-const navItemEl = listIngredients.createElement('li');
-navItemEl.classList.add('item');
-listIngredients.append(
-  navItemEl,
-  navItemEl,
-  navItemEl,
-  navItemEl,
-  navItemEl,
-  navItemEl
-);
+console.log(listIngredients);
+for (let i = 0; i < ingredients.length; i += 1) {
+  const navItemEl = document.createElement("li");
+  navItemEl.classList.add("item");
+  navItemEl.textContent = ingredients[i];
+  listIngredients.append(navItemEl);
+}
+
